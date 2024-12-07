@@ -72,7 +72,7 @@ OHDInterface::OHDInterface(OHDProfile profile1)
 
   if (OHDFilesystemUtil::exists(std::string(getConfigBasePath()) +
                                 "ethernet.txt")) {
-    m_ethernet_link = std::make_shared<EthernetLink>(m_profile);
+    m_ethernet_link = std::make_shared<EthernetLink>(config,m_profile);
     return;
   }
 
